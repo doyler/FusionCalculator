@@ -41,6 +41,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.calculate = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.outcomes = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // armor1element1
@@ -77,11 +79,11 @@
             // 
             this.armor1stars.FormattingEnabled = true;
             this.armor1stars.Items.AddRange(new object[] {
-            "One",
-            "Two",
-            "Three",
-            "Four",
-            "Five"});
+            1,
+            2,
+            3,
+            4,
+            5});
             this.armor1stars.Location = new System.Drawing.Point(266, 53);
             this.armor1stars.Name = "armor1stars";
             this.armor1stars.Size = new System.Drawing.Size(121, 21);
@@ -121,11 +123,11 @@
             // 
             this.armor2stars.FormattingEnabled = true;
             this.armor2stars.Items.AddRange(new object[] {
-            "One",
-            "Two",
-            "Three",
-            "Four",
-            "Five"});
+            1,
+            2,
+            3,
+            4,
+            5});
             this.armor2stars.Location = new System.Drawing.Point(266, 106);
             this.armor2stars.Name = "armor2stars";
             this.armor2stars.Size = new System.Drawing.Size(121, 21);
@@ -195,11 +197,32 @@
             this.calculate.UseVisualStyleBackColor = true;
             this.calculate.Click += new System.EventHandler(this.calculate_Click);
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(12, 214);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(100, 13);
+            this.label7.TabIndex = 13;
+            this.label7.Text = "Possible Outcomes:";
+            // 
+            // outcomes
+            // 
+            this.outcomes.Location = new System.Drawing.Point(12, 242);
+            this.outcomes.Multiline = true;
+            this.outcomes.Name = "outcomes";
+            this.outcomes.ReadOnly = true;
+            this.outcomes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.outcomes.Size = new System.Drawing.Size(438, 174);
+            this.outcomes.TabIndex = 15;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(462, 428);
+            this.Controls.Add(this.outcomes);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.calculate);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -215,7 +238,6 @@
             this.Controls.Add(this.armor1element1);
             this.Name = "Form1";
             this.Text = "Fusion Calculator";
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,6 +261,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button calculate;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox outcomes;
     }
 }
 
