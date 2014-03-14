@@ -14,6 +14,8 @@ namespace FusionCalculator
 {
     public partial class Form1 : Form
     {
+        private DataTable myTable = new DataTable();
+
         private int total = 0;
         private int epics = 0;
         private int monoLegends = 0;
@@ -21,6 +23,7 @@ namespace FusionCalculator
         private int ultraRares = 0;
         private int superRares = 0;
         private int rares = 0;
+        private int betterStats = 0;
 
         public Form1()
         {
@@ -70,8 +73,6 @@ namespace FusionCalculator
             elements.Add("Spirit");
 
             outcomes.Text = "";
-
-            DataTable myTable = CsvToDataTable("armors.csv");
 
             foreach (DataRow row in myTable.Rows)
             {
@@ -187,13 +188,16 @@ namespace FusionCalculator
                 }
             }
 
-            outcomes.Text += "\r\n\r\n";
+            outcomes.Text += "\r\n";
             outcomes.Text += "\r\nEpic Chance: " + (epics / (total + 0.0)) * 100 + "%";
             outcomes.Text += "\r\nLegendary Chance: " + (legends / (total + 0.0)) * 100 + "%";
             outcomes.Text += "\r\n     (Mono Legendary Chance: " + (monoLegends / (total + 0.0)) * 100 + "%)";
             outcomes.Text += "\r\nUltra Rare Chance: " + (ultraRares / (total + 0.0)) * 100 + "%";
             outcomes.Text += "\r\nSuper Rare Chance: " + (superRares / (total + 0.0)) * 100 + "%";
             outcomes.Text += "\r\nRare Chance: " + (rares / (total + 0.0)) * 100 + "%";
+
+            outcomes.Text += "\r\n";
+            outcomes.Text += "\r\nChance that new armor will be better than either input: " + (betterStats / (total + 0.0)) * 100 + "%";
         }
 
         private DataTable CsvToDataTable(string strFileName)
@@ -239,12 +243,119 @@ namespace FusionCalculator
                 epics++;
             }
 
-            outcomes.Text += "\r\n" + name + " : " + combination + " : " + rarity + " : " + combinedStats;
+            if (combinedStats > Math.Max(Convert.ToInt32(armor1stats.Text), Convert.ToInt32(armor2stats.Text)))
+            {
+                betterStats++;
+            }
+
+            outcomes.Text += name + " : " + combination + " : " + rarity + " : " + combinedStats + "\r\n";
         }
 
         private void showError(string theError)
         {
             MessageBox.Show(theError, "Error", MessageBoxButtons.OK, MessageBoxIcon.Exclamation, MessageBoxDefaultButton.Button1);
+        }
+
+        private void AllCheckBoxes_CheckedChanged(Object sender, EventArgs e)
+        {
+            if (armor1manual.Checked)
+            {
+                armor1combo.Enabled = false;
+
+                armor1element1.Enabled = true;
+                armor1element2.Enabled = true;
+                armor1stars.Enabled = true;
+                armor1stats.Enabled = true;
+            }
+            else if (armor1auto.Checked)
+            {
+                armor1combo.Enabled = true;
+
+                armor1element1.Enabled = false;
+                armor1element2.Enabled = false;
+                armor1stars.Enabled = false;
+                armor1stats.Enabled = false;
+            }
+            if (armor2manual.Checked)
+            {
+                armor2combo.Enabled = false;
+
+                armor2element1.Enabled = true;
+                armor2element2.Enabled = true;
+                armor2stars.Enabled = true;
+                armor2stats.Enabled = true;
+            }
+            else if (armor2auto.Checked)
+            {
+                armor2combo.Enabled = true;
+
+                armor2element1.Enabled = false;
+                armor2element2.Enabled = false;
+                armor2stars.Enabled = false;
+                armor2stats.Enabled = false;
+            }
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            armor1manual.Checked = true;
+            armor2manual.Checked = true;
+
+            myTable = CsvToDataTable("armors.csv");
+
+            foreach (DataRow row in myTable.Rows)
+            {
+                string name = row["Name"].ToString();
+
+                armor1combo.Items.Add(name);
+                armor2combo.Items.Add(name);
+            }
+        }
+
+        private void armor1combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string armorName = armor1combo.Text.Replace("\'", "\'\'");
+
+                DataRow[] theArmor;
+                theArmor = myTable.Select("Name=\'" + armorName + "\'");
+
+                armor1element1.Text = theArmor[0]["Element1"].ToString();
+                if (theArmor[0]["Element2"].ToString() == "0")
+                    armor1element2.Text = "None";
+                else
+                    armor1element2.Text = theArmor[0]["Element2"].ToString();
+                armor1stars.Text = theArmor[0]["Rarity"].ToString();
+                armor1stats.Text = ((int)theArmor[0]["Attack"] + (int)theArmor[0]["Defense"]).ToString();
+            }
+            catch (Exception ex)
+            {
+                showError(ex.Message);
+            }
+        }
+
+        private void armor2combo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            try
+            {
+                string armorName = armor2combo.Text.Replace("\'", "\'\'");
+
+                DataRow[] theArmor;
+                theArmor = myTable.Select("Name=\'" + armorName + "\'");
+
+                armor2element1.Text = theArmor[0]["Element1"].ToString();
+                if (theArmor[0]["Element2"].ToString() == "0")
+                    armor2element2.Text = "None";
+                else
+                    armor2element2.Text = theArmor[0]["Element2"].ToString();
+                armor2stars.Text = theArmor[0]["Rarity"].ToString();
+                armor2stats.Text = ((int)theArmor[0]["Attack"] + (int)theArmor[0]["Defense"]).ToString();
+            }
+            catch (Exception ex)
+            {
+                showError(ex.Message);
+            }
         }
     }
 }
