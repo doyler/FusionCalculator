@@ -14,7 +14,8 @@ namespace FusionCalculator
 {
     public partial class Form1 : Form
     {
-        private DataTable myTable = new DataTable();
+        private DataTable allArmors = new DataTable();
+        private DataTable confirmedArmors = new DataTable();
 
         private int total = 0;
         private int epics = 0;
@@ -74,7 +75,7 @@ namespace FusionCalculator
 
             outcomes.Text = "";
 
-            foreach (DataRow row in myTable.Rows)
+            foreach (DataRow row in confirmedArmors.Rows)
             {
                 string name = row["Name"].ToString();
                 string combination = row["Combination"].ToString();
@@ -301,9 +302,10 @@ namespace FusionCalculator
             armor1manual.Checked = true;
             armor2manual.Checked = true;
 
-            myTable = CsvToDataTable("armors.csv");
+            allArmors = CsvToDataTable("armors.csv");
+            confirmedArmors = CsvToDataTable("confirmed.csv");
 
-            foreach (DataRow row in myTable.Rows)
+            foreach (DataRow row in allArmors.Rows)
             {
                 string name = row["Name"].ToString();
 
@@ -319,7 +321,7 @@ namespace FusionCalculator
                 string armorName = armor1combo.Text.Replace("\'", "\'\'");
 
                 DataRow[] theArmor;
-                theArmor = myTable.Select("Name=\'" + armorName + "\'");
+                theArmor = allArmors.Select("Name=\'" + armorName + "\'");
 
                 armor1element1.Text = theArmor[0]["Element1"].ToString();
                 if (theArmor[0]["Element2"].ToString() == "0")
@@ -342,7 +344,7 @@ namespace FusionCalculator
                 string armorName = armor2combo.Text.Replace("\'", "\'\'");
 
                 DataRow[] theArmor;
-                theArmor = myTable.Select("Name=\'" + armorName + "\'");
+                theArmor = allArmors.Select("Name=\'" + armorName + "\'");
 
                 armor2element1.Text = theArmor[0]["Element1"].ToString();
                 if (theArmor[0]["Element2"].ToString() == "0")
