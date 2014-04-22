@@ -65,140 +65,158 @@ namespace FusionCalculator
             {
                 showError("Armor 2 cannot contain " + armor2element2.Text + " as Armor 1 already contains it.");
             }
-
-            List<string> elements = new List<string>();
-            elements.Add("Earth");
-            elements.Add("Water");
-            elements.Add("Fire");
-            elements.Add("Air");
-            elements.Add("Spirit");
-
-            outcomes.Text = "";
-
-            foreach (DataRow row in confirmedArmors.Rows)
+            else if (armor1stars.Text == "")
             {
-                string name = row["Name"].ToString();
-                string combination = row["Combination"].ToString();
-                int rarity = (int)row["Rarity"];
-                int combinedStats = (int)row["Attack"] + (int)row["Defense"];
+                showError("Armor 1 must have a value for rarity (stars).");
+            }
+            else if (armor2stars.Text == "")
+            {
+                showError("Armor 2 must have a value for rarity (stars).");
+            }
+            else if (armor1stats.Text == "")
+            {
+                showError("Armor 1 must have a value for combined stats.");
+            }
+            else if (armor2stats.Text == "")
+            {
+                showError("Armor 2 must have a value for combined stats.");
+            }
+            else
+            {
+                List<string> elements = new List<string>();
+                elements.Add("Earth");
+                elements.Add("Water");
+                elements.Add("Fire");
+                elements.Add("Air");
+                elements.Add("Spirit");
 
-                int minStars = Math.Min(Convert.ToInt32(armor1stars.Text), Convert.ToInt32(armor2stars.Text)) - 2;
-                if (minStars < 1) { minStars = 1; }
-                int maxStars = Math.Max(Convert.ToInt32(armor1stars.Text), Convert.ToInt32(armor2stars.Text)) + 2;
-                if (maxStars > 5) { maxStars = 5; }
+                outcomes.Text = "";
 
-                if (rarity < minStars || rarity > maxStars)
+                foreach (DataRow row in confirmedArmors.Rows)
                 {
-                    continue;
-                }
+                    string name = row["Name"].ToString();
+                    string combination = row["Combination"].ToString();
+                    int rarity = (int)row["Rarity"];
+                    int combinedStats = (int)row["Attack"] + (int)row["Defense"];
 
-                //mono Armor 1 Element 1
-                elements.Remove(armor1element1.Text);
-                if (row[armor1element1.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
-                    row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
-                    && row[elements[3]].ToString() == "No")
-                {
-                    addArmor(name, combination, true, rarity, combinedStats);
-                }
-                elements.Add(armor1element1.Text);
+                    int minStars = Math.Min(Convert.ToInt32(armor1stars.Text), Convert.ToInt32(armor2stars.Text)) - 2;
+                    if (minStars < 1) { minStars = 1; }
+                    int maxStars = Math.Max(Convert.ToInt32(armor1stars.Text), Convert.ToInt32(armor2stars.Text)) + 2;
+                    if (maxStars > 5) { maxStars = 5; }
 
-                //mono Armor 2 Element 1
-                elements.Remove(armor2element1.Text);
-                if (row[armor2element1.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
-                    row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
-                    && row[elements[3]].ToString() == "No")
-                {
-                    addArmor(name, combination, true, rarity, combinedStats);
-                }
-                elements.Add(armor2element1.Text);
+                    if (rarity < minStars || rarity > maxStars)
+                    {
+                        continue;
+                    }
 
-                //Armor 1 Element 1 + Armor 2 Element 1
-                elements.Remove(armor1element1.Text);
-                elements.Remove(armor2element1.Text);
-                if (row[armor1element1.Text].ToString() == "Yes" && row[armor2element1.Text].ToString() == "Yes" &&
-                    row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
-                    row[elements[2]].ToString() == "No")
-                {
-                    addArmor(name, combination, false, rarity, combinedStats);
-                }
-                elements.Add(armor1element1.Text);
-                elements.Add(armor2element1.Text);
-
-                if (armor1element2.Text != "None")
-                {
-                    //mono Armor 1 Element 2
-                    elements.Remove(armor1element2.Text);
-                    if (row[armor1element2.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
+                    //mono Armor 1 Element 1
+                    elements.Remove(armor1element1.Text);
+                    if (row[armor1element1.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
                         row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
                         && row[elements[3]].ToString() == "No")
                     {
                         addArmor(name, combination, true, rarity, combinedStats);
                     }
-                    elements.Add(armor1element2.Text);
+                    elements.Add(armor1element1.Text);
 
-                    //Armor 1 Element 2 + Armor 2 Element 1
-                    elements.Remove(armor1element2.Text);
+                    //mono Armor 2 Element 1
                     elements.Remove(armor2element1.Text);
-                    if (row[armor1element2.Text].ToString() == "Yes" && row[armor2element1.Text].ToString() == "Yes" &&
-                        row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
-                        row[elements[2]].ToString() == "No")
+                    if (row[armor2element1.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
+                        row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
+                        && row[elements[3]].ToString() == "No")
                     {
-                        addArmor(name, combination, false, rarity, combinedStats);
+                        addArmor(name, combination, true, rarity, combinedStats);
                     }
-                    elements.Add(armor1element2.Text);
                     elements.Add(armor2element1.Text);
 
-                    if (armor2element2.Text != "None")
-                    {
-                        //Armor 1 Element 2 + Armor 2 Element 2
-                        elements.Remove(armor1element2.Text);
-                        elements.Remove(armor2element2.Text);
-                        if (row[armor1element2.Text].ToString() == "Yes" && row[armor2element2.Text].ToString() == "Yes" &&
-                            row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
-                            row[elements[2]].ToString() == "No")
-                        {
-                            addArmor(name, combination, false, rarity, combinedStats);
-                        }
-                        elements.Add(armor1element2.Text);
-                        elements.Add(armor2element2.Text);
-                    }
-                }
-                if (armor2element2.Text != "None")
-                {
-                    //mono Armor 2 Element 2
-                    elements.Remove(armor2element2.Text);
-                    if (row[armor2element2.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
-                        row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
-                        && row[elements[3]].ToString() == "No")
-                    {
-                        addArmor(name, combination, true, rarity, combinedStats);
-                    }
-                    elements.Add(armor2element2.Text);
-
-                    //Armor 1 Element 1 + Armor 2 Element 2
+                    //Armor 1 Element 1 + Armor 2 Element 1
                     elements.Remove(armor1element1.Text);
-                    elements.Remove(armor2element2.Text);
-                    if (row[armor1element1.Text].ToString() == "Yes" && row[armor2element2.Text].ToString() == "Yes" &&
+                    elements.Remove(armor2element1.Text);
+                    if (row[armor1element1.Text].ToString() == "Yes" && row[armor2element1.Text].ToString() == "Yes" &&
                         row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
                         row[elements[2]].ToString() == "No")
                     {
                         addArmor(name, combination, false, rarity, combinedStats);
                     }
                     elements.Add(armor1element1.Text);
-                    elements.Add(armor2element2.Text);
+                    elements.Add(armor2element1.Text);
+
+                    if (armor1element2.Text != "None")
+                    {
+                        //mono Armor 1 Element 2
+                        elements.Remove(armor1element2.Text);
+                        if (row[armor1element2.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
+                            row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
+                            && row[elements[3]].ToString() == "No")
+                        {
+                            addArmor(name, combination, true, rarity, combinedStats);
+                        }
+                        elements.Add(armor1element2.Text);
+
+                        //Armor 1 Element 2 + Armor 2 Element 1
+                        elements.Remove(armor1element2.Text);
+                        elements.Remove(armor2element1.Text);
+                        if (row[armor1element2.Text].ToString() == "Yes" && row[armor2element1.Text].ToString() == "Yes" &&
+                            row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
+                            row[elements[2]].ToString() == "No")
+                        {
+                            addArmor(name, combination, false, rarity, combinedStats);
+                        }
+                        elements.Add(armor1element2.Text);
+                        elements.Add(armor2element1.Text);
+
+                        if (armor2element2.Text != "None")
+                        {
+                            //Armor 1 Element 2 + Armor 2 Element 2
+                            elements.Remove(armor1element2.Text);
+                            elements.Remove(armor2element2.Text);
+                            if (row[armor1element2.Text].ToString() == "Yes" && row[armor2element2.Text].ToString() == "Yes" &&
+                                row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
+                                row[elements[2]].ToString() == "No")
+                            {
+                                addArmor(name, combination, false, rarity, combinedStats);
+                            }
+                            elements.Add(armor1element2.Text);
+                            elements.Add(armor2element2.Text);
+                        }
+                    }
+                    if (armor2element2.Text != "None")
+                    {
+                        //mono Armor 2 Element 2
+                        elements.Remove(armor2element2.Text);
+                        if (row[armor2element2.Text].ToString() == "Yes" && row[elements[0]].ToString() == "No" &&
+                            row[elements[1]].ToString() == "No" && row[elements[2]].ToString() == "No"
+                            && row[elements[3]].ToString() == "No")
+                        {
+                            addArmor(name, combination, true, rarity, combinedStats);
+                        }
+                        elements.Add(armor2element2.Text);
+
+                        //Armor 1 Element 1 + Armor 2 Element 2
+                        elements.Remove(armor1element1.Text);
+                        elements.Remove(armor2element2.Text);
+                        if (row[armor1element1.Text].ToString() == "Yes" && row[armor2element2.Text].ToString() == "Yes" &&
+                            row[elements[0]].ToString() == "No" && row[elements[1]].ToString() == "No" &&
+                            row[elements[2]].ToString() == "No")
+                        {
+                            addArmor(name, combination, false, rarity, combinedStats);
+                        }
+                        elements.Add(armor1element1.Text);
+                        elements.Add(armor2element2.Text);
+                    }
                 }
+
+                outcomes.Text += "\r\n";
+                outcomes.Text += "\r\nEpic Chance: " + (epics / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\nLegendary Chance: " + (legends / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\n     (Mono Legendary Chance: " + (monoLegends / (total + 0.0)) * 100 + "%)";
+                outcomes.Text += "\r\nUltra Rare Chance: " + (ultraRares / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\nSuper Rare Chance: " + (superRares / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\nRare Chance: " + (rares / (total + 0.0)) * 100 + "%";
+
+                outcomes.Text += "\r\n";
+                outcomes.Text += "\r\nChance that new armor will be better than either input: " + (betterStats / (total + 0.0)) * 100 + "%";
             }
-
-            outcomes.Text += "\r\n";
-            outcomes.Text += "\r\nEpic Chance: " + (epics / (total + 0.0)) * 100 + "%";
-            outcomes.Text += "\r\nLegendary Chance: " + (legends / (total + 0.0)) * 100 + "%";
-            outcomes.Text += "\r\n     (Mono Legendary Chance: " + (monoLegends / (total + 0.0)) * 100 + "%)";
-            outcomes.Text += "\r\nUltra Rare Chance: " + (ultraRares / (total + 0.0)) * 100 + "%";
-            outcomes.Text += "\r\nSuper Rare Chance: " + (superRares / (total + 0.0)) * 100 + "%";
-            outcomes.Text += "\r\nRare Chance: " + (rares / (total + 0.0)) * 100 + "%";
-
-            outcomes.Text += "\r\n";
-            outcomes.Text += "\r\nChance that new armor will be better than either input: " + (betterStats / (total + 0.0)) * 100 + "%";
         }
 
         private DataTable CsvToDataTable(string strFileName)
