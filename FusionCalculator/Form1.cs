@@ -207,15 +207,15 @@ namespace FusionCalculator
                 }
 
                 outcomes.Text += "\r\n";
-                outcomes.Text += "\r\nEpic Chance: " + (epics / (total + 0.0)) * 100 + "%";
-                outcomes.Text += "\r\nLegendary Chance: " + (legends / (total + 0.0)) * 100 + "%";
-                outcomes.Text += "\r\n     (Mono Legendary Chance: " + (monoLegends / (total + 0.0)) * 100 + "%)";
-                outcomes.Text += "\r\nUltra Rare Chance: " + (ultraRares / (total + 0.0)) * 100 + "%";
-                outcomes.Text += "\r\nSuper Rare Chance: " + (superRares / (total + 0.0)) * 100 + "%";
-                outcomes.Text += "\r\nRare Chance: " + (rares / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\nEpic Chance: " + Math.Round((epics / (total + 0.0)) * 100, 2) + "%";
+                outcomes.Text += "\r\nLegendary Chance: " + Math.Round((legends / (total + 0.0)) * 100, 2) + "%";
+                outcomes.Text += "\r\n     (Mono Legendary Chance: " + Math.Round((monoLegends / (total + 0.0)) * 100, 2) + "%)";
+                outcomes.Text += "\r\nUltra Rare Chance: " + Math.Round((ultraRares / (total + 0.0)) * 100, 2) + "%";
+                outcomes.Text += "\r\nSuper Rare Chance: " + Math.Round((superRares / (total + 0.0)) * 100, 2) + "%";
+                outcomes.Text += "\r\nRare Chance: " + Math.Round((rares / (total + 0.0)) * 100, 2) + "%";
 
                 outcomes.Text += "\r\n";
-                outcomes.Text += "\r\nChance that new armor will be better than either input: " + (betterStats / (total + 0.0)) * 100 + "%";
+                outcomes.Text += "\r\nChance that new armor will be better than either input: " + Math.Round((betterStats / (total + 0.0)) * 100, 2) + "%";
             }
         }
 
