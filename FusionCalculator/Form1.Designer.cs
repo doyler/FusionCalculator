@@ -261,20 +261,24 @@
             // 
             // armor1combo
             // 
+            this.armor1combo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor1combo.FormattingEnabled = true;
             this.armor1combo.Location = new System.Drawing.Point(88, 72);
             this.armor1combo.Name = "armor1combo";
             this.armor1combo.Size = new System.Drawing.Size(189, 21);
             this.armor1combo.TabIndex = 7;
+            this.armor1combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             this.armor1combo.SelectedIndexChanged += new System.EventHandler(this.armor1combo_SelectedIndexChanged);
             // 
             // armor2combo
             // 
+            this.armor2combo.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor2combo.FormattingEnabled = true;
             this.armor2combo.Location = new System.Drawing.Point(88, 179);
             this.armor2combo.Name = "armor2combo";
             this.armor2combo.Size = new System.Drawing.Size(189, 21);
             this.armor2combo.TabIndex = 14;
+            this.armor2combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             this.armor2combo.SelectedIndexChanged += new System.EventHandler(this.armor2combo_SelectedIndexChanged);
             // 
             // label11
