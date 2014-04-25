@@ -63,6 +63,7 @@
             // 
             // armor1element1
             // 
+            this.armor1element1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor1element1.FormattingEnabled = true;
             this.armor1element1.Items.AddRange(new object[] {
             "Fire",
@@ -75,9 +76,11 @@
             this.armor1element1.Name = "armor1element1";
             this.armor1element1.Size = new System.Drawing.Size(93, 21);
             this.armor1element1.TabIndex = 3;
+            this.armor1element1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor1element2
             // 
+            this.armor1element2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor1element2.FormattingEnabled = true;
             this.armor1element2.Items.AddRange(new object[] {
             "Fire",
@@ -90,9 +93,11 @@
             this.armor1element2.Name = "armor1element2";
             this.armor1element2.Size = new System.Drawing.Size(90, 21);
             this.armor1element2.TabIndex = 4;
+            this.armor1element2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor1stars
             // 
+            this.armor1stars.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor1stars.FormattingEnabled = true;
             this.armor1stars.Items.AddRange(new object[] {
             1,
@@ -104,9 +109,11 @@
             this.armor1stars.Name = "armor1stars";
             this.armor1stars.Size = new System.Drawing.Size(67, 21);
             this.armor1stars.TabIndex = 5;
+            this.armor1stars.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2element1
             // 
+            this.armor2element1.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor2element1.FormattingEnabled = true;
             this.armor2element1.Items.AddRange(new object[] {
             "Fire",
@@ -119,9 +126,11 @@
             this.armor2element1.Name = "armor2element1";
             this.armor2element1.Size = new System.Drawing.Size(93, 21);
             this.armor2element1.TabIndex = 10;
+            this.armor2element1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2element2
             // 
+            this.armor2element2.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor2element2.FormattingEnabled = true;
             this.armor2element2.Items.AddRange(new object[] {
             "Fire",
@@ -134,9 +143,11 @@
             this.armor2element2.Name = "armor2element2";
             this.armor2element2.Size = new System.Drawing.Size(90, 21);
             this.armor2element2.TabIndex = 11;
+            this.armor2element2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2stars
             // 
+            this.armor2stars.AutoCompleteMode = System.Windows.Forms.AutoCompleteMode.SuggestAppend;
             this.armor2stars.FormattingEnabled = true;
             this.armor2stars.Items.AddRange(new object[] {
             1,
@@ -148,6 +159,7 @@
             this.armor2stars.Name = "armor2stars";
             this.armor2stars.Size = new System.Drawing.Size(67, 21);
             this.armor2stars.TabIndex = 12;
+            this.armor2stars.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // label1
             // 
@@ -267,8 +279,8 @@
             this.armor1combo.Name = "armor1combo";
             this.armor1combo.Size = new System.Drawing.Size(189, 21);
             this.armor1combo.TabIndex = 7;
-            this.armor1combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             this.armor1combo.SelectedIndexChanged += new System.EventHandler(this.armor1combo_SelectedIndexChanged);
+            this.armor1combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2combo
             // 
@@ -278,8 +290,8 @@
             this.armor2combo.Name = "armor2combo";
             this.armor2combo.Size = new System.Drawing.Size(189, 21);
             this.armor2combo.TabIndex = 14;
-            this.armor2combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             this.armor2combo.SelectedIndexChanged += new System.EventHandler(this.armor2combo_SelectedIndexChanged);
+            this.armor2combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // label11
             // 
