@@ -75,7 +75,7 @@
             this.armor1element1.Location = new System.Drawing.Point(88, 25);
             this.armor1element1.Name = "armor1element1";
             this.armor1element1.Size = new System.Drawing.Size(93, 21);
-            this.armor1element1.TabIndex = 3;
+            this.armor1element1.TabIndex = 4;
             this.armor1element1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor1element2
@@ -92,7 +92,7 @@
             this.armor1element2.Location = new System.Drawing.Point(187, 25);
             this.armor1element2.Name = "armor1element2";
             this.armor1element2.Size = new System.Drawing.Size(90, 21);
-            this.armor1element2.TabIndex = 4;
+            this.armor1element2.TabIndex = 5;
             this.armor1element2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor1stars
@@ -108,7 +108,7 @@
             this.armor1stars.Location = new System.Drawing.Point(286, 25);
             this.armor1stars.Name = "armor1stars";
             this.armor1stars.Size = new System.Drawing.Size(67, 21);
-            this.armor1stars.TabIndex = 5;
+            this.armor1stars.TabIndex = 6;
             this.armor1stars.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2element1
@@ -125,7 +125,7 @@
             this.armor2element1.Location = new System.Drawing.Point(88, 133);
             this.armor2element1.Name = "armor2element1";
             this.armor2element1.Size = new System.Drawing.Size(93, 21);
-            this.armor2element1.TabIndex = 10;
+            this.armor2element1.TabIndex = 12;
             this.armor2element1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2element2
@@ -142,7 +142,7 @@
             this.armor2element2.Location = new System.Drawing.Point(187, 133);
             this.armor2element2.Name = "armor2element2";
             this.armor2element2.Size = new System.Drawing.Size(90, 21);
-            this.armor2element2.TabIndex = 11;
+            this.armor2element2.TabIndex = 13;
             this.armor2element2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // armor2stars
@@ -158,7 +158,7 @@
             this.armor2stars.Location = new System.Drawing.Point(286, 133);
             this.armor2stars.Name = "armor2stars";
             this.armor2stars.Size = new System.Drawing.Size(67, 21);
-            this.armor2stars.TabIndex = 12;
+            this.armor2stars.TabIndex = 14;
             this.armor2stars.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
             // label1
@@ -220,7 +220,7 @@
             this.calculate.Location = new System.Drawing.Point(187, 222);
             this.calculate.Name = "calculate";
             this.calculate.Size = new System.Drawing.Size(75, 23);
-            this.calculate.TabIndex = 15;
+            this.calculate.TabIndex = 17;
             this.calculate.Text = "Calculate";
             this.calculate.UseVisualStyleBackColor = true;
             this.calculate.Click += new System.EventHandler(this.calculate_Click);
@@ -242,7 +242,7 @@
             this.outcomes.ReadOnly = true;
             this.outcomes.ScrollBars = System.Windows.Forms.ScrollBars.Both;
             this.outcomes.Size = new System.Drawing.Size(438, 174);
-            this.outcomes.TabIndex = 16;
+            this.outcomes.TabIndex = 18;
             // 
             // label8
             // 
@@ -278,7 +278,7 @@
             this.armor1combo.Location = new System.Drawing.Point(88, 72);
             this.armor1combo.Name = "armor1combo";
             this.armor1combo.Size = new System.Drawing.Size(189, 21);
-            this.armor1combo.TabIndex = 7;
+            this.armor1combo.TabIndex = 8;
             this.armor1combo.SelectedIndexChanged += new System.EventHandler(this.armor1combo_SelectedIndexChanged);
             this.armor1combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
@@ -289,7 +289,7 @@
             this.armor2combo.Location = new System.Drawing.Point(88, 179);
             this.armor2combo.Name = "armor2combo";
             this.armor2combo.Size = new System.Drawing.Size(189, 21);
-            this.armor2combo.TabIndex = 14;
+            this.armor2combo.TabIndex = 16;
             this.armor2combo.SelectedIndexChanged += new System.EventHandler(this.armor2combo_SelectedIndexChanged);
             this.armor2combo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.armor_KeyPress);
             // 
@@ -307,14 +307,14 @@
             this.armor1stats.Location = new System.Drawing.Point(362, 26);
             this.armor1stats.Name = "armor1stats";
             this.armor1stats.Size = new System.Drawing.Size(100, 20);
-            this.armor1stats.TabIndex = 6;
+            this.armor1stats.TabIndex = 7;
             // 
             // armor2stats
             // 
             this.armor2stats.Location = new System.Drawing.Point(362, 134);
             this.armor2stats.Name = "armor2stats";
             this.armor2stats.Size = new System.Drawing.Size(100, 20);
-            this.armor2stats.TabIndex = 13;
+            this.armor2stats.TabIndex = 15;
             // 
             // armor1auto
             // 
@@ -322,7 +322,7 @@
             this.armor1auto.Location = new System.Drawing.Point(3, 51);
             this.armor1auto.Name = "armor1auto";
             this.armor1auto.Size = new System.Drawing.Size(72, 17);
-            this.armor1auto.TabIndex = 2;
+            this.armor1auto.TabIndex = 3;
             this.armor1auto.TabStop = true;
             this.armor1auto.Text = "Automatic";
             this.armor1auto.UseVisualStyleBackColor = true;
@@ -334,7 +334,7 @@
             this.armor1manual.Location = new System.Drawing.Point(3, 4);
             this.armor1manual.Name = "armor1manual";
             this.armor1manual.Size = new System.Drawing.Size(60, 17);
-            this.armor1manual.TabIndex = 1;
+            this.armor1manual.TabIndex = 2;
             this.armor1manual.TabStop = true;
             this.armor1manual.Text = "Manual";
             this.armor1manual.UseVisualStyleBackColor = true;
@@ -347,7 +347,7 @@
             this.armor1panel.Location = new System.Drawing.Point(4, 25);
             this.armor1panel.Name = "armor1panel";
             this.armor1panel.Size = new System.Drawing.Size(78, 78);
-            this.armor1panel.TabIndex = 28;
+            this.armor1panel.TabIndex = 1;
             // 
             // armor2panel
             // 
@@ -356,7 +356,7 @@
             this.armor2panel.Location = new System.Drawing.Point(4, 132);
             this.armor2panel.Name = "armor2panel";
             this.armor2panel.Size = new System.Drawing.Size(78, 76);
-            this.armor2panel.TabIndex = 29;
+            this.armor2panel.TabIndex = 9;
             // 
             // armor2manual
             // 
@@ -364,7 +364,7 @@
             this.armor2manual.Location = new System.Drawing.Point(3, 4);
             this.armor2manual.Name = "armor2manual";
             this.armor2manual.Size = new System.Drawing.Size(60, 17);
-            this.armor2manual.TabIndex = 8;
+            this.armor2manual.TabIndex = 10;
             this.armor2manual.TabStop = true;
             this.armor2manual.Text = "Manual";
             this.armor2manual.UseVisualStyleBackColor = true;
@@ -376,7 +376,7 @@
             this.armor2auto.Location = new System.Drawing.Point(3, 51);
             this.armor2auto.Name = "armor2auto";
             this.armor2auto.Size = new System.Drawing.Size(72, 17);
-            this.armor2auto.TabIndex = 9;
+            this.armor2auto.TabIndex = 11;
             this.armor2auto.TabStop = true;
             this.armor2auto.Text = "Automatic";
             this.armor2auto.UseVisualStyleBackColor = true;
