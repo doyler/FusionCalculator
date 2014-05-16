@@ -15,7 +15,6 @@ namespace FusionCalculator
     public partial class Form1 : Form
     {
         private DataTable allArmors = new DataTable();
-        private DataTable confirmedArmors = new DataTable();
 
         private int total = 0;
         private int epics = 0;
@@ -92,8 +91,13 @@ namespace FusionCalculator
 
                 outcomes.Text = "";
 
-                foreach (DataRow row in confirmedArmors.Rows)
+                foreach (DataRow row in allArmors.Rows)
                 {
+                    if (row["Fusable"].ToString() == "FALSE")
+                    {
+                        continue;
+                    }
+
                     string name = row["Name"].ToString();
                     string combination = row["Combination"].ToString();
                     int rarity = (int)row["Rarity"];
@@ -321,7 +325,6 @@ namespace FusionCalculator
             armor2manual.Checked = true;
 
             allArmors = CsvToDataTable("armors.csv");
-            confirmedArmors = CsvToDataTable("confirmed.csv");
 
             foreach (DataRow row in allArmors.Rows)
             {
