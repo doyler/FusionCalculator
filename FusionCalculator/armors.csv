@@ -1,5 +1,5 @@
 Name,Element1,Element2,Rarity,Attack,Defense,Combination,Earth,Water,Fire,Air,Spirit,Fusable
-Abominable Platemail,Air,Water,4,861,1073,Air/Water,No,Yes,No,Yes,No,FALSE
+Abominable Platemail,Air,Water,4,861,1073,Air/Water,No,Yes,No,Yes,No,TRUE
 Admiral's Battleworn Regalia,Fire,Spirit,4,966,744,Fire/Spirit,No,No,Yes,No,Yes,TRUE
 Aegis of Sky Majesty,Air,Fire,5,1650,1452,Air/Fire,No,No,Yes,Yes,No,TRUE
 Aegis of the Dragon Armor,Earth,Air,4,1160,1321,Air/Earth,Yes,No,No,Yes,No,FALSE
@@ -10,7 +10,7 @@ Arborsteel Vanguard,Earth,Water,5,1351,1762,Earth/Water,Yes,Yes,No,No,No,TRUE
 Arcane Mantle,Spirit,0,5,1888,1690,Spirit,No,No,No,No,Yes,FALSE
 Armor of Boreas,Air,Water,4,1000,810,Air/Water,No,Yes,No,Yes,No,FALSE
 Armor of Eurus,Water,Spirit,4,892,908,Water/Spirit,No,Yes,No,No,Yes,FALSE
-Armor of Glacius,Air,Earth,4,1050,1050,Air/Earth,Yes,No,No,Yes,No,FALSE
+Armor of Glacius,Air,Earth,4,1050,1050,Air/Earth,Yes,No,No,Yes,No,TRUE
 Armor of Notus,Spirit,Air,4,715,1113,Spirit/Air,No,No,No,Yes,Yes,FALSE
 Armor of Phyrus,Fire,Earth,4,1105,738,Fire/Earth,Yes,No,Yes,No,No,FALSE
 Armor of the Bear,Earth,Spirit,4,1049,780,Earth/Spirit,Yes,No,No,No,Yes,TRUE
@@ -18,7 +18,7 @@ Armor of the Devoted,Spirit,0,5,1750,1496,Spirit,No,No,No,No,Yes,FALSE
 Armor of the Infernal Lord,Fire,Earth,3,792,885,Earth/Fire,Yes,No,Yes,No,No,TRUE
 Armor of the Komodo,Earth,0,5,1888,1690,Earth,Yes,No,No,No,No,FALSE
 Armor of the Wolf,Earth,Fire,4,685,1134,Earth/Spirit,Yes,No,Yes,No,No,TRUE
-Asherah's Armor,Water,Spirit,4,963,963,Water/Spirit,No,Yes,No,No,Yes,FALSE
+Asherah's Armor,Water,Spirit,4,963,963,Water/Spirit,No,Yes,No,No,Yes,TRUE
 Assassin's Shroud,Spirit,Earth,4,876,891,Spirit/Earth,Yes,No,No,No,Yes,TRUE
 Asura Armor,Earth,Water,2,515,564,Earth/Water,Yes,Yes,No,No,No,TRUE
 Atlantean Avenger Armor,Water,Air,1,579,611,Air/Water,No,Yes,No,Yes,No,TRUE
@@ -42,10 +42,10 @@ Crius Armor,Earth,Air,1,579,677,Air/Earth,Yes,No,No,Yes,No,TRUE
 Cyclone Chainmail,Air,0,4,1504,2050,Air,No,No,No,Yes,No,FALSE
 Dark Prince's Royal Armor,Fire,Spirit,3,885,735,Fire/Spirit,No,No,Yes,No,Yes,TRUE
 Deep Dragon Mail,Water,Earth,4,682,909,Earth/Water,Yes,Yes,No,No,No,TRUE
-Demon's Carapace,Spirit,Air,4,920,1150,Spirit/Air,No,No,No,Yes,Yes,FALSE
+Demon's Carapace,Spirit,Air,4,920,1150,Spirit/Air,No,No,No,Yes,Yes,TRUE
 Dragon Tamer Costume,Water,Earth,4,740,1001,Earth/Water,Yes,Yes,No,No,No,TRUE
-Drake Platemail,Fire,Air,4,1139,918,Fire/Air,No,No,Yes,Yes,No,FALSE
-Druidic Platemail,Earth,Spirit,5,1646,1646,Earth/Spirit,Yes,No,No,No,Yes,FALSE
+Drake Platemail,Fire,Air,4,1139,918,Fire/Air,No,No,Yes,Yes,No,TRUE
+Druidic Platemail,Earth,Spirit,5,1646,1646,Earth/Spirit,Yes,No,No,No,Yes,TRUE
 Eldritch Keeper's Robes,Spirit,0,4,1044,642,Spirit,No,No,No,No,Yes,TRUE
 Embersteel Armor,Spirit,Fire,2,595,515,Fire/Spirit,No,No,Yes,No,Yes,TRUE
 Ethereal Garment,Spirit,0,4,684,772,Spirit,No,No,No,No,Yes,TRUE
@@ -71,14 +71,14 @@ Jackalope's Chaingarb,Water,Earth,4,943,927,Earth/Water,Yes,Yes,No,No,No,TRUE
 Jian's Battlegear,Fire,Water,4,1056,798,Fire/Water,No,Yes,Yes,No,No,FALSE
 Kaleidoscopic Starmetal Raiment,All,0,4,679,417,All,No,No,No,No,No,FALSE
 Kerstman's Shroud,Fire,Air,5,1389,1886,Air/Fire,No,No,Yes,Yes,No,FALSE
-Krampus Mantle,Water,Fire,4,1076,928,Water/Fire,No,Yes,Yes,No,No,FALSE
+Krampus's Mantle,Water,Fire,4,1076,928,Water/Fire,No,Yes,Yes,No,No,TRUE
 Leviathan's Platemail,Water,0,4,1079,906,Water,No,Yes,No,No,No,TRUE
 Lightning Lord Armor,Air,Water,2,525,553,Air/Water,No,Yes,No,Yes,No,TRUE
 Living Flame Armor,Fire,Spirit,1,611,620,Fire/Spirit,No,No,Yes,No,Yes,TRUE
-Maelstorm Irons,Air,Water,5,1786,1388,Air/Water,No,Yes,No,Yes,No,TRUE
+Maelstrom Irons,Air,Water,5,1786,1388,Air/Water,No,Yes,No,Yes,No,TRUE
 Mantle of the Beast,Spirit,Earth,4,987,798,Earth/Spirit,Yes,No,No,No,Yes,TRUE
 Molten Shroud,Fire,Earth,2,567,525,Earth/Fire,Yes,No,Yes,No,No,TRUE
-Monks Vestments,Earth,Spirit,2,525,585,Earth/Spirit,Yes,No,No,No,Yes,TRUE
+Monk's Vestments,Earth,Spirit,2,525,585,Earth/Spirit,Yes,No,No,No,Yes,TRUE
 Monstrous Garb,Air,Earth,2,525,574,Air/Earth,Yes,No,No,Yes,No,TRUE
 Moontide Platemail,Spirit,Water,5,1434,1287,Spirit/Water,No,Yes,No,No,Yes,TRUE
 Mountainvine Shroud,Earth,0,4,703,716,Earth,Yes,No,No,No,No,TRUE
@@ -96,12 +96,12 @@ Ruby Plate Mail,Fire,0,4,798,581,Fire,No,No,Yes,No,No,TRUE
 Runic Robes,Fire,Earth,5,1930,1418,Earth/Fire,Yes,No,Yes,No,No,FALSE
 Sandstorm Platemail,Earth,Air,5,1554,1812,Air/Earth,Yes,No,No,Yes,No,TRUE
 Scorchstone Aegis,Fire,0,4,721,1144,Fire,No,No,Yes,No,No,TRUE
-Sky Guardian Armor,Spirit,Air,3,916,1027,Air/Spirit,No,No,No,Yes,Yes,TRUE
+Sky Guardian,Spirit,Air,3,916,1027,Air/Spirit,No,No,No,Yes,Yes,TRUE
 Slimebane Battlegear,Earth,Water,4,1046,788,Earth/Water,Yes,Yes,No,No,No,TRUE
 Snakeskin Armor,Water,Earth,1,447,611,Earth/Water,Yes,Yes,No,No,No,TRUE
 Snowstorm Platemail,Water,Air,5,1796,1796,Air/Water,No,Yes,No,Yes,No,FALSE
 Soulshard Necromantle,Water,Spirit,5,1826,1326,Spirit/Water,No,Yes,No,No,Yes,FALSE
-Soulshard Ramient,Spirit,0,4,1088,776,Spirit,No,No,No,No,Yes,TRUE
+Soulshard Raiment,Spirit,0,4,1088,776,Spirit,No,No,No,No,Yes,TRUE
 Spartan's Wargear,Air,Earth,4,1371,1101,Air/Earth,Yes,No,No,Yes,No,TRUE
 Specter's Shroud,Spirit,Air,5,2054,1460,Spirit/Air,No,No,No,Yes,Yes,FALSE
 Spectral Captain's Uniform,Spirit,Water,3,678,735,Spirit/Water,No,Yes,No,No,Yes,TRUE
@@ -112,13 +112,13 @@ Storm Sorcerer,Air,Water,3,1021,842,Air/Water,No,Yes,No,Yes,No,TRUE
 Stormrage Armor,Water,Air,2,687,674,Water/Air,No,Yes,No,Yes,No,TRUE
 Swamp Shaman Robes,Water,Earth,3,723,885,Earth/Water,Yes,Yes,No,No,No,TRUE
 Swampstone Platemail,Water,Earth,4,956,868,Earth/Water,Yes,Yes,No,No,No,TRUE
-Tectonic Mantle Armor,Earth,0,5,1312,1855,Earth,Yes,No,No,No,No,TRUE
+Tectonic Mantle,Earth,0,5,1312,1855,Earth,Yes,No,No,No,No,TRUE
 Tempered Battlegear,Fire,Earth,4,1283,937,Earth/Fire,Yes,No,Yes,No,No,TRUE
 Torchflame Mantle,Fire,Spirit,2,644,743,Fire/Spirit,No,No,Yes,No,Yes,TRUE
 Tortoiseshell Aegis,Earth,Air,4,664,1027,Air/Earth,Yes,No,No,Yes,No,TRUE
 Trollforge Platemail,Earth,0,4,1188,673,Earth,Yes,No,No,No,No,TRUE
-Typhoon Armor,Water,0,4,1140,977,Water,No,Yes,No,No,No,FALSE
-Vesture of Frost,Air,0,4,986,986,Air,No,No,No,Yes,No,FALSE
+Typhoon Armor,Water,0,4,1140,977,Water,No,Yes,No,No,No,TRUE
+Vesture of Frost,Air,0,4,986,986,Air,No,No,No,Yes,No,TRUE
 Vinewood Carapace,Water,Earth,2,525,646,Earth/Water,Yes,Yes,No,No,No,TRUE
 Voidborne Shroud,Fire,Spirit,4,1273,932,Fire/Spirit,No,No,Yes,No,Yes,FALSE
 Volcanic Mantle,Earth,Fire,1,373,346,Earth/Fire,Yes,No,Yes,No,No,TRUE
@@ -126,8 +126,8 @@ Voodoo Robes,Spirit,Air,4,1188,1008,Spirit/Air,No,No,No,Yes,Yes,FALSE
 Wanderer's Shroud,Fire,0,4,854,1009,Fire,No,No,Yes,No,No,TRUE
 Wave Charmer's Mantle,Water,Spirit,1,525,585,Spirit/Water,No,No,No,No,Yes,TRUE
 Wicked Wraith,Earth,Spirit,3,836,1090,Earth/Spirit,Yes,No,No,No,Yes,TRUE
-Wicker Mantle,Fire,0,4,1063,860,Fire,No,No,Yes,No,No,FALSE
+Wicker Mantle,Fire,0,4,1063,860,Fire,No,No,Yes,No,No,TRUE
 Wind Monarch's Robes,Air,Spirit,1,595,525,Air/Spirit,No,No,No,Yes,Yes,TRUE
 Witch's Robes,Air,Earth,4,959,938,Air/Earth,Yes,No,No,Yes,No,TRUE
 Wraithscale Armor,Spirit,Water,4,1188,967,Spirit/Water,No,Yes,No,No,Yes,FALSE
-Wurmshroud Mantle,Earth,0,4,916,1145,Earth,Yes,No,No,No,No,FALSE
+Wurmshroud Mantle,Earth,0,4,916,1145,Earth,Yes,No,No,No,No,TRUE
